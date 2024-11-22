@@ -1,0 +1,165 @@
+/* General */
+
+body {	
+  position: relative;
+  background: radial-gradient(#641775, #0e0033);
+  background-color: #0e0033;
+  background-size: 1500px 1500px;
+  background-attachment: fixed;
+  height: auto;
+  min-height: 100%;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../img/backgorund.jpg');
+  opacity: 0.5;
+  z-index: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Play','Helvetica Neue',Arial,Helvetica,sans-serif;
+  color: #593565;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+
+.ui.container, .ui.grid {
+  position: relative;
+  z-index: 1;
+}
+
+.ui.segment {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Home */
+
+.container {
+  padding: 1em 0;
+}
+
+.ui.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ui.heading.neon {
+  font-family: 'Play', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 3rem;
+  color: #FFD5FF;
+  text-shadow: 1px 0px 4px #ffd5ff, 2px 0px 4px #ffd5ff, 0px 0px 3px #d42cca, 4px 3px 0px #d42cca, 0px 1px, 0px 0px 10px, 0px 0px 10px;
+  text-transform: uppercase;
+  padding-right: 0.5rem;
+  margin-bottom: 0;
+}
+
+.search-block {
+  width: 100%;
+}
+
+.ui.grid > .row.images-wrapper {
+  justify-content: space-between;
+}
+
+.images-list .grid {
+  margin-top: 0;
+}
+
+.images-list .image-wrapper {
+  padding: 1em;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.images-list .image-wrapper img {
+  box-sizing: content-box;
+}
+
+.images-list .image-wrapper img.selected {
+  border: 2px dotted red;
+}
+
+.images-list .grid .row:first-of-type {
+  max-height: 400px;
+  overflow-y: scroll;
+  padding-top: 0;
+}
+
+.images-wrapper .ui.fluid.image-wrapper {
+  height: 420px;
+}
+
+.ui.modal .header {
+  display: flex;
+  justify-content: space-between;
+}
+
+i.icon.asterisk.loading {
+  position: relative;
+  left: calc(50% - 176px);
+  margin: 100px;
+}
+
+/* Модалка загрузки файлов */
+.file-uploader-modal .scrolling.content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.file-uploader-modal .image-preview-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.file-uploader-modal img {
+  width: 250px;
+}
+
+/* Модалка просмотра файлов */
+.uploaded-previewer-modal .image-preview-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+.uploaded-previewer-modal .image-preview-container img {
+  width: 170px;
+}
+
+.table.ui.celled.table tbody td {
+  width: 40%;
+}
+
+.uploaded-previewer-modal .image-preview-container .ui.table {
+  margin: 0 50px;
+  width: 50%;
+}
+
+.uploaded-previewer-modal .image-preview-container .buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.uploaded-previewer-modal .image-preview-container .ui.labeled.icon.button > .icon {
+  background: none;
+}
+
+.buttons-wrapper > .ui.labeled.icon.button {
+  margin-bottom: 10px;
+}

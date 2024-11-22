@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>Резервное копирование</title>
+    <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+  <body>
+    <div class="ui container">
+      <header class="ui header">
+        <h1 class="ui heading neon">Резервное копирование изображений</h1>
+      </header>
+      <div class="ui grid">
+        <div class="row">
+          <div class="column ten wide">
+            <div class="ui large action input search-block">
+              <input type="text" placeholder="Введите id пользователя">
+              <button class="ui primary button replace">Заменить</button>
+              <button class="ui primary button add">Добавить</button>
+            </div>
+          </div>
+        </div>
+        <div class="row images-wrapper">
+          <div class="column ten wide images-list">
+            <div class="ui grid">
+              <div class="row">
+              </div>
+              <div class="row">
+                <button class="ui disabled primary button select-all">Выбрать всё</button>
+                <button class="ui primary button show-uploaded-files">Посмотреть загруженные файлы</button>
+                <button class="ui primary disabled button send">Отправить на диск</button>
+              </div>
+            </div>
+          </div>
+          <div class="column six wide">
+            <img class="ui fluid image" src="https://yugcleaning.ru/wp-content/themes/consultix/images/no-image-found-360x250.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ui modal file-uploader-modal">
+      <div class="header">Загрузка файлов <i class="x icon"></i></div>
+      <div class="scrolling content">
+      </div>
+      <div class="actions">
+        <div class="ui close button">Закрыть</div>
+        <div class="ui send-all button">Отправить все файлы</div>
+      </div>
+    </div>
+    <div class="ui modal uploaded-previewer-modal">
+      <div class="header">Просмотр загруженных файлов<i class="x icon"></i></div>
+      <div class="scrolling content">
+        <i class="asterisk loading icon massive"></i>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="semantic/semantic.min.js"></script>
+    <script src="js/api/createRequest.js"></script>
+    <script src="js/api/VK.js"></script>
+    <script src="js/api/Yandex.js"></script>
+
+    <script src="js/ui/SearchBlock.js"></script>
+    <script src="js/ui/ImageViewer.js"></script>
+    <script src="js/ui/Modals/BaseModal.js"></script>
+    <script src="js/ui/Modals/FileUploaderModal.js"></script>
+    <script src="js/ui/Modals/PreviewModal.js"></script>
+    <script src="js/App.js"></script>
+
+    <script>
+      App.init();
+    </script>
+  </body>
+</html>
